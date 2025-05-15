@@ -1,48 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
-  --font: 'Inter', sans-serif;
+  --font: "Inter", sans-serif;
 
-  --primary-100: #F26CF9;
-  --primary-90: #F589FA;
-  --primary-50: #FCD3FE;
-  --primary-40: #FCE2FE;
-  --primary-30: #FDEDFE;
+  --primary-100: #f26cf9;
+  --primary-90: #f589fa;
+  --primary-50: #fcd3fe;
+  --primary-40: #fce2fe;
+  --primary-30: #fdedfe;
 
-  --secondary-110: #1C2346;
-  --secondary-100: #37437D;
-  --secondary-90: #5562A2;
-  --secondary-70: #707DBF;
-  --secondary-60: #707DBF;
-  --secondary-50: #D3DAF9;
+  --secondary-110: #1c2346;
+  --secondary-100: #37437d;
+  --secondary-90: #5562a2;
+  --secondary-70: #707dbf;
+  --secondary-60: #707dbf;
+  --secondary-50: #d3daf9;
 
-  --yellow-100: #FFCA39;
-  --yellow-90: #FFFC3C;
+  --yellow-100: #ffca39;
+  --yellow-90: #fffc3c;
 
-  --gray-10: #FFFFFF;
-  --gray-20: #F7F7F7;
-  --gray-30: #EDEDED;
-  --gray-40: #E0E0E1;
-  --gray-50: #C3C3C4;
-  --gray-60: #9F9FA1;
+  --gray-10: #ffffff;
+  --gray-20: #f7f7f7;
+  --gray-30: #ededed;
+  --gray-40: #e0e0e1;
+  --gray-50: #c3c3c4;
+  --gray-60: #9f9fa1;
   --gray-70: #777779;
   --gray-80: #636365;
   --gray-90: #434345;
-  --gray-100: #1E1E20;
+  --gray-100: #1e1e20;
 
-  --cool-gray-10: #EEFFFF;
-  --cool-gray-20: #E4E5F5;
-  --cool-gray-30: #DDDEED;
-  --cool-gray-40: #D1D2E0;
-  --cool-gray-50: #B0B1BD;
-  --cool-gray-60: #8F8F99;
-  --cool-gray-70: #72737A;
-  --cool-gray-80: #56565C;
-  --cool-gray-90: #39393D;
+  --cool-gray-10: #eeffff;
+  --cool-gray-20: #e4e5f5;
+  --cool-gray-30: #dddeed;
+  --cool-gray-40: #d1d2e0;
+  --cool-gray-50: #b0b1bd;
+  --cool-gray-60: #8f8f99;
+  --cool-gray-70: #72737a;
+  --cool-gray-80: #56565c;
+  --cool-gray-90: #39393d;
   --cool-gray-100: #131314;
 
   --headline-color: var(--secondary-100);
@@ -65,7 +67,7 @@
 
   --link-color: var(--primary-100);
   --link-hover-color: var(--primary-90);
-  
+
   --card-background-color: var(--gray-10);
   --card-border-color: var(--gray-20);
 
@@ -112,9 +114,10 @@
 
   --nav-link-icon-color: var(--secondary-100);
   --nav-link-icon-hover-color: var(--primary-100);
- }
+}
 
- html, body {
+html,
+body {
   margin: 0;
   font-size: 16px;
   font-weight: 400;
@@ -128,9 +131,10 @@
 
 .btn {
   cursor: pointer;
-  color : var(--button-text-color);
+  color: var(--button-text-color);
   background-color: var(--button-background-color);
-  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
   border-width: 0;
   border: 1px solid var(--button-border-color);
   border-radius: 10px;
@@ -146,7 +150,7 @@
     color: var(--button-hover-text-color);
     background-color: var(--button-hover-background-color);
     border: 1px solid var(--button-hover-border-color);
-    text-decoration: none ;
+    text-decoration: none;
   }
 }
 
@@ -179,24 +183,23 @@
   height: 100dvh;
   margin: 0.5rem;
 
-    @media (min-width: 768px) {
-      grid-template-columns: 250px 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "aside header"
-        "aside main"
-        "aside footer";
-    }
+  @media (min-width: 768px) {
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "aside header"
+      "aside main"
+      "aside footer";
+  }
 
-    @media (min-width: 1200px) {
-      grid-template-columns: 250px 1fr;
-      grid-template-rows: auto 1fr auto;
-      grid-template-areas:
-        "aside header"
-        "aside main"
-        "aside footer";
-    }
-
+  @media (min-width: 1200px) {
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "aside header"
+      "aside main"
+      "aside footer";
+  }
 }
 
 aside {
@@ -251,6 +254,17 @@ footer {
 }
 
 /* navlink */
+.nav-link.active {
+  cursor: pointer;
+  background-color: var(--nav-link-hover-bg);
+  color: var(--nav-link-icon-hover-color);
+  font-weight: 600;
+
+  i,
+  .nav-link-text {
+    color: var(--nav-link-icon-hover-color);
+  }
+}
 
 .nav-links {
   .nav-link {
@@ -259,35 +273,36 @@ footer {
     padding: 1rem 0;
     transition: color 0.3s ease, background-color 0.3s ease;
     border-radius: 0.5rem;
-
+    text-decoration: none;
     color: var(--nav-link-text-color);
+
     i {
       font-size: 1.5rem;
       color: var(--nav-link-icon-color);
       margin-right: 1rem;
       transition: color 0.3s ease;
     }
+
     .nav-link-text {
       font-size: 1rem;
       transition: color 0.3s ease;
     }
 
-    &:hover {
+    &:hover,
+    &.active {
       cursor: pointer;
       background-color: var(--nav-link-hover-bg);
       color: var(--nav-link-icon-hover-color);
       font-weight: 600;
 
-      i {
-        color: var(--nav-link-icon-hover-color);
-      }
-
+      i,
       .nav-link-text {
         color: var(--nav-link-icon-hover-color);
       }
     }
   }
 }
+
 
 /* input select textarea form */
 
@@ -328,31 +343,31 @@ textarea {
 }
 
 form {
-    width: 100%;
+  width: 100%;
 
-    .field-validation-error {
-        position: absolute;
-        z-index: 1;
-        right: 0.22rem;
-        top: 5px;
-        font-size: 0.78em;
-        background-color: var(--danger-20);
-        color: var(--danger);
-        padding: 0.40rem 1rem;
-        border-radius: 10px;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        gap: 0.5rem;
-    }
+  .field-validation-error {
+    position: absolute;
+    z-index: 1;
+    right: 0.22rem;
+    top: 5px;
+    font-size: 0.78em;
+    background-color: var(--danger-20);
+    color: var(--danger);
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+  }
 
-    .input-validation-error {
-        border-color: var(--danger-20);
-    }
+  .input-validation-error {
+    border-color: var(--danger-20);
+  }
 
-    .field-group {
-        position: relative;
-    }
+  .field-group {
+    position: relative;
+  }
 }
 
 .form-group {
