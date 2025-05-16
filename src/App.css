@@ -114,6 +114,10 @@
 
   --nav-link-icon-color: var(--secondary-100);
   --nav-link-icon-hover-color: var(--primary-100);
+
+  --event-card-background-color: var(--gray-10);
+  --event-card-list-image-background-color: var(--gray-40);
+  --evet-card-date-color: var(--gray-70);
 }
 
 html,
@@ -160,6 +164,19 @@ body {
   background-color: var(--button-primary-background-color);
   padding: 1rem 0;
   margin-top: 2rem;
+  &:hover {
+    color: var(--button-primary-hover-text-color);
+    background-color: var(--button-primary-hover-background-color);
+    border: 1px solid var(--button-primary-hover-border-color);
+  }
+}
+
+.btn-link {
+  color: var(--button-primary-text-color);
+  background-color: var(--button-primary-background-color);
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 0;
   &:hover {
     color: var(--button-primary-hover-text-color);
     background-color: var(--button-primary-hover-background-color);
@@ -393,4 +410,68 @@ form {
     align-items: center;
     margin-bottom: 2rem;
   }
+}
+
+
+/* Event */
+/* EventList*/
+
+.event-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+    .event-card {
+    background-color: var(--event-card-background-color);
+    border-radius: 1rem;
+    padding: 1rem;
+      .event-card-image {
+        width: 100%;
+        height: 209px;
+        border: 0;
+        border-radius: 1rem;
+        object-fit: cover;
+        background-color: var(--event-card-list-image-background-color);
+        display: block;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        
+      }
+    }
+}
+
+.event-card-content {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  .event-card-date {
+    font-size: 11px;
+    color: var(--evet-card-date-color);
+    }
+  .event-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-100);
+  }
+  .event-card-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+    color: var(--evet-card-date-color);
+  }
+}
+
+.event-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+    .event-card-price {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-100)
+    }
 }

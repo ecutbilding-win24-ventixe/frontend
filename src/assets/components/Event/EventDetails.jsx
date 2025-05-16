@@ -7,7 +7,7 @@ const EventDetails = () => {
   const [event, setEvent] = useState({})
 
   const getEvents = async () => {
-      const response = await fetch(`https://ventixe-eventservice-gbekgwdbadc7c4hz.swedencentral-01.azurewebsites.net/api/Events/${id}/`)
+      const response = await fetch(`https://ventixe-eventservice-gbekgwdbadc7c4hz.swedencentral-01.azurewebsites.net/api/events/${id}/`)
       if (response.ok) {
         const data = await response.json()
         setEvent(data.result)
@@ -19,7 +19,7 @@ const EventDetails = () => {
 
   return (
     <div className="event-details">
-      <h1>{event.title}</h1>
+      <h1>{event.name}</h1>
       <p>{event.description}</p>
       <p>{event.eventDate}</p>
       <p>{event.location}</p>

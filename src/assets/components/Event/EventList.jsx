@@ -5,9 +5,10 @@ const EventList = () => {
   const [events, setEvents] = useState([])
 
   const getEvents = async () => {
-    const response = await fetch("https://ventixe-eventservice-gbekgwdbadc7c4hz.swedencentral-01.azurewebsites.net/api/Events")
+    const response = await fetch("https://ventixe-eventservice-gbekgwdbadc7c4hz.swedencentral-01.azurewebsites.net/api/events")
     if (response.ok) {
       const data = await response.json()
+      console.log(data.result)
       setEvents(data.result)
     }
   }
@@ -16,9 +17,8 @@ const EventList = () => {
     getEvents()
   }, [])
 
-
   return (
-    <div>
+    <div className="event-list">
       {
         events.map(event => (<EventItem item={event} key={event.id} />))
       }
