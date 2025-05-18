@@ -10,7 +10,7 @@ const Login = () => {
       </div>
 
 
-      <form>
+      <form className="login-form">
 
         <div className="form-group">
           <label htmlFor="email">Email</label>
@@ -29,6 +29,11 @@ const Login = () => {
         </div>
 
         <button className="btn btn-submit">Login</button>
+
+        <div className="form-footer">
+          <span>Don't have an account?</span>
+          <a href="/signup" className="btn btn-secondary">Register</a>
+        </div>
       </form>
       
     </section>

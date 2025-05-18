@@ -8,7 +8,6 @@ const EventList = () => {
     const response = await fetch("https://ventixe-eventservice-gbekgwdbadc7c4hz.swedencentral-01.azurewebsites.net/api/events")
     if (response.ok) {
       const data = await response.json()
-      console.log(data.result)
       setEvents(data.result)
     }
   }

@@ -15,13 +15,13 @@ const EventItem = ({ item }) => {
           </span>
           <div className="event-card-title">{item.name}</div>
           <div className="event-card-location">
-            <i class="fa-thin fa-location-dot"></i>
+            <i className="fa-thin fa-location-dot"></i>
             <span>{item.location}</span>
           </div>
         </div>
 
         <div className="event-card-footer">
-          <Link to={`/events/${item.id}`} className="btn btn-link event-card-button">Info</Link>
+          <Link to={`/events/${item.id}`} className="btn btn-link">Info</Link>
           <div className="event-card-price">$ {price}</div>
         </div>
         

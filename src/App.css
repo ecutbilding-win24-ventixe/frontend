@@ -163,7 +163,6 @@ body {
   color: var(--button-primary-text-color);
   background-color: var(--button-primary-background-color);
   padding: 1rem 0;
-  margin-top: 2rem;
   &:hover {
     color: var(--button-primary-hover-text-color);
     background-color: var(--button-primary-hover-background-color);
@@ -177,6 +176,20 @@ body {
   text-align: center;
   text-decoration: none;
   padding: 0.5rem 0;
+  &:hover {
+    color: var(--button-primary-hover-text-color);
+    background-color: var(--button-primary-hover-background-color);
+    border: 1px solid var(--button-primary-hover-border-color);
+  }
+}
+
+.btn-status {
+  color: var(--gray-90);
+  background-color: var(--gray-10);
+  padding: 0.8rem;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
   &:hover {
     color: var(--button-primary-hover-text-color);
     background-color: var(--button-primary-hover-background-color);
@@ -247,6 +260,17 @@ footer {
   padding: 1.5rem;
 }
 
+
+/* message */
+.error-message {
+    color: #FF6347;
+    font-size: 0.7rem;
+}
+
+.success-message {
+    color: #32CD32;
+    font-size: 0.7rem;
+}
 /* aside */
 
 .link-logotype {
@@ -408,12 +432,40 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.login-form {
+  button {
+    margin-top: 1rem;
+  }
+  .form-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    gap: 1rem ;
+  }
+}
+
+/* Event */
+/* EventHeader */
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  .event-status-item {
+    display: flex;
+    gap: 1rem;
   }
 }
 
 
-/* Event */
 /* EventList*/
 
 .event-list {
