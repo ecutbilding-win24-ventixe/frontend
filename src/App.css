@@ -266,7 +266,7 @@ a {
   }
 }
 
-.booking-item-actions-btn {
+.item-actions-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1015,6 +1015,8 @@ tbody {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
 }
+
+.customer-item-actions,
 .booking-item-actions {
   display: flex;
   align-items: center;
@@ -1029,3 +1031,48 @@ tbody {
   font-weight: 600;
   color: var(--primary-100);
 }
+
+
+.customers-list-table {
+  width: 100%;
+  background-color: var(--gray-10);
+  border-radius: 1rem;
+  padding: 1rem;
+  font-family: var(--font-standard);
+  thead {
+    border-radius: 1rem;
+    tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 1rem; 
+    }
+      th {
+      padding-block: 1rem;
+      border-bottom: 1px solid var(--gray-40);
+      text-align: left;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--gray-60);
+      }
+    }
+  }
+
+  .customers-list-body { 
+    width: 100%;
+    tr {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--gray-40);
+      text-align: left;
+      padding-block: 1rem;
+      padding-inline: 0.2rem ;
+      &:hover {
+        background-color: var(--primary-50);
+        cursor: pointer;
+      }
+        td {
+          font-size: 12px;
+          font-weight: 500;
+        }
+     }
+  }

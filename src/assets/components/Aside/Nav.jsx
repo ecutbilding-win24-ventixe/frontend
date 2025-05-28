@@ -19,9 +19,9 @@ const Nav = () => {
         <span className="nav-link-text">Events</span>
       </NavLink>
 
-      <NavLink to="/users" className="nav-link">
+      <NavLink to="/customers" className="nav-link">
         <i className="fa-regular fa-users"></i>
-        <span className="nav-link-text">User Profiles</span>
+        <span className="nav-link-text">Customers</span>
       </NavLink>
 
       

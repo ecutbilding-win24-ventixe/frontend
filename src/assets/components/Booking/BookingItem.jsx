@@ -3,7 +3,7 @@ import Modal from '../Modal/Modal';
 import EditBookingModal from './EditBookingModal';
 
 const BookingItem = ({ item }) => {
-  const dateObj = new Date(item.createAt);
+    const dateObj = new Date(item.createAt);
     const date = dateObj.toLocaleDateString('sv-SE');
     const time = dateObj.toLocaleTimeString('en-US', {
       hour: '2-digit',
@@ -98,8 +98,8 @@ const handleDelete = async () => {
       </td>
       <td>
         <div className="booking-item-actions">
-          <button className="booking-item-actions-btn" onClick={handleDelete} ><i className="fa-regular fa-trash-xmark"></i></button>
-          <button className="booking-item-actions-btn" onClick={() => setShowEditModal(true)}><i className="fa-regular fa-pen-to-square"></i></button>
+          <button className="item-actions-btn" onClick={handleDelete} ><i className="fa-regular fa-trash-xmark"></i></button>
+          <button className="item-actions-btn" onClick={() => setShowEditModal(true)}><i className="fa-regular fa-pen-to-square"></i></button>
         </div>
         <Modal isOpen={showEditModal} onClose={() => setShowEditModal(false)} title="Update Booking">
           <EditBookingModal item={item} onClose={() => setShowEditModal(false)} onSubmit={handleUpdate}/>
