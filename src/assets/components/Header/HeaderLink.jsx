@@ -2,7 +2,7 @@ import React from 'react'
 
 const HeaderLink = () => {
   return (
-    <div>HeaderLink</div>
+    <div>Admin Panel</div>
   )
 }
 

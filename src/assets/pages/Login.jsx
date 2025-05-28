@@ -19,11 +19,12 @@ const Login = () => {
         },
         body: JSON.stringify({ 
           Email: email,
-          Password: password }),
+          Password: password,
+        }),
       });
 
       const data = await response.json();
-
+      console.log(data);
       if (!response.ok) {
         setError(data.message || "Failed to login.");
         return;
@@ -31,6 +32,7 @@ const Login = () => {
       if (data.token) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("email", data.email)
+        localStorage.setItem("userId", data.userId);
       }
       navigate("/");
     } catch (error) {

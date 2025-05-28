@@ -9,6 +9,8 @@ import EventContext from './assets/contexts/EventContext'
 import EventDetails from './assets/components/Event/EventDetails'
 import BookingEvent from './assets/contexts/BookingEvent'
 import RouteControl from './RouteControl'
+import EditEventModal from './assets/components/Event/EditEventModal'
+import UsersList from './assets/components/Users/UsersList'
 
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
         <Route path="/events" element={<EventContext /> } />
         <Route path="/events/:id" element={<EventDetails /> } />
         <Route path="/events/booking/:id" element={<BookingEvent /> } />
+        <Route path="/bookings" element={<BookingEvent /> } />
+        <Route path="/users" element={<UsersList /> } />
       </Route>
 
       <Route path='/' element={<CenterLayout />}>
