@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import BookingItem from './BookingItem'
 
-const BookingList = () => {
+const BookingList = ({ filterStatus }) => {
   const [bookings, setBookings] = useState([])
 
   const getBookings = async () => {
@@ -14,6 +14,10 @@ const BookingList = () => {
   useState(() => {
     getBookings()
   }, [])
+
+    const filteredBookings = filterStatus
+    ? bookings.filter(b => b.bookingStatusId === filterStatus)
+    : bookings;
 
 
   return (
@@ -32,7 +36,7 @@ const BookingList = () => {
     </tr>
   </thead>
   <tbody>
-    {bookings.map(booking => (
+    {filteredBookings.map(booking => (
       <BookingItem item={booking} key={booking.id} />
     ))}
   </tbody>

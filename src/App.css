@@ -217,7 +217,7 @@ a {
 
 .btn-status {
   color: var(--gray-90);
-  background-color: var(--gray-10);
+  background-color: var(--cool-gray-10);
   padding: 0.8rem;
   border-radius: 20px;
   text-align: center;
@@ -227,7 +227,14 @@ a {
     background-color: var(--button-primary-hover-background-color);
     border: 1px solid var(--button-primary-hover-border-color);
   }
+  &.active {
+    color: var(--button-primary-hover-text-color);
+    background-color: var(--button-primary-hover-background-color);
+    border: 1px solid var(--button-primary-hover-border-color);
+  }
 }
+
+
 
 
 .btn-account {
@@ -936,7 +943,8 @@ form {
   margin-bottom: 3rem;
   .booking-status-item {
     display: flex;
-    gap: 1rem;
+    background-color: var(--cool-gray-10) ;
+    border-radius: 20px;
   }
 }
 
@@ -1126,3 +1134,4 @@ tbody {
     text-transform: capitalize;
   }
 }
+
