@@ -1114,3 +1114,15 @@ tbody {
       }
     }
 }
+
+.breadcrumb-header {
+  display: flex;
+  align-items: center;
+  .breadcrumb-main {
+    color: var(--primary-100);
+  }
+  .breadcrumb-current {
+    padding-left: 0.5rem;
+    text-transform: capitalize;
+  }
+}
